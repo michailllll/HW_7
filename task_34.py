@@ -7,14 +7,14 @@
 # если с ритмом все в порядке и “Пам парам”, если с ритмом все не в порядке 
 
 
-def f(stich):
-    return sum(1 for i in stich if i in 'аеёиоуыэюя')
+def f(ritm):
+    return sum(1 for i in ritm if i in 'аеёиоуыэюя')
     
-c = input("введите фразу  ")    
+stich = input("введите фразу  ")    
 
-st = c.lower().split()
-t = f(st[0])
-if all([f(i) == t for i in st]):
+st = stich.lower().split()
+fraza = f(st[0])
+if all([f(i) == fraza for i in st]):
     print('Парам пам-пам')
 else:
     print('Пам парам')
